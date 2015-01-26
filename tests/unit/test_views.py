@@ -13,4 +13,4 @@ def test_hello_world():
     eq_(resp.status_code, 200)
     eq_(resp.headers['Content-Type'], 'application/json')
     data = json.loads(resp.data.decode())
-    eq_(data['message'], 'Hello Worlb!')
+    eq_(data['message'].startswith('Hello'), True)
