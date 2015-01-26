@@ -1,4 +1,4 @@
-FROM totem/python-base:3.4-trusty
+FROM totem/python-base:2.7-trusty
 
 ADD requirements.txt /opt/scholastic/
 RUN pip install -r /opt/scholastic/requirements.txt
