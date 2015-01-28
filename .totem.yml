@@ -1,0 +1,11 @@
+branches:
+  - match: master
+    realms:
+      - realm: 'not-production'
+        proxy:
+         - host: 'troubleshoot.cu.melt.sh'
+           paths:
+           - path: '/'
+             port: 8080
+             accessControl: 'public'
+        comptroller: {}
