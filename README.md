@@ -9,3 +9,26 @@ Totem demonstration for Scholastic
 * Modify file [demo/views.py#Line 10](demo/views.py#L10) and fix the typo for "Worlb!" to "World!"
 * Modify file [Dockerfile#Line 1](Dockerfile#L1) and change python image from 2.7-trusty to 3.4-trusty
 * Create a [pull request](https://github.com/totem/scholastic-demo/compare) to merge these changes.
+
+# Sample Config
+```
+enabled: true
+
+variables:
+  enable_travis: true
+  enable_public_host: true
+  node_count: 2
+  min_nodes: 1
+
+defaults:
+  proxy: &proxy-defaults
+    upstreams:
+      8080:
+        health:
+          uri: /
+
+deployers:
+  default:
+    proxy:
+      <<: *proxy-defaults
+```
