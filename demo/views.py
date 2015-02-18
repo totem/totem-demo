@@ -8,7 +8,7 @@ app = flask.Flask(__name__)
 @app.route('/')
 def hello_world():
     return flask.jsonify({
-        'message': 'Hello Worlb!',
+        'message': 'Hello Worlbd!',
         'python': sys.version,
         'headers': str(request.headers)
     })
