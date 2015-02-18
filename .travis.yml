@@ -20,4 +20,4 @@ after_success:
 
 notifications:
   webhooks:
-    - http://orchestrator.r53.us-west-1.th.melt.sh/external/hooks/travis
+    - http://orchestrator.elb.us-west-1.th.melt.sh/external/hooks/travis
