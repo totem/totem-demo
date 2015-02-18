@@ -1,3 +1,4 @@
+RUN echo "force"
 FROM totem/python-base:2.7-trusty
 
 ADD requirements.txt /opt/totem-demo/
