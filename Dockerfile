@@ -6,6 +6,7 @@ RUN /bin/bash -c "$(if pip3 1> /dev/null 2>&1; then echo pip3; else echo pip; fi
 ADD . /opt/totem-demo
 WORKDIR /opt/totem-demo
 
+
 EXPOSE 8080
 CMD ["server.py"]
 
