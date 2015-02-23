@@ -32,4 +32,3 @@ deployers:
     proxy:
       <<: *proxy-defaults
 ```
-
