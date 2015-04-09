@@ -19,16 +19,4 @@ variables:
   enable_public_host: true
   node_count: 2
   min_nodes: 1
-
-defaults:
-  proxy: &proxy-defaults
-    upstreams:
-      8080:
-        health:
-          uri: /
-
-deployers:
-  default:
-    proxy:
-      <<: *proxy-defaults
 ```
