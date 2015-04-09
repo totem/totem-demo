@@ -1,7 +1,7 @@
 enabled: true
-dummy: {}
 variables:
   enable_travis: true
   enable_public_host: true
   node_count: 2
   min_nodes: 1
+  public_host: 'totem.meltdemo.com'
