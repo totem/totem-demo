@@ -5,3 +5,7 @@ variables:
   enable_public_host: true
   node_count: 2
   min_nodes: 1
+  
+prod-us-west-1:
+  enabled:
+    value: "{{ ref == 'master' and env == 'production' }}"
