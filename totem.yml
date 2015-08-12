@@ -7,6 +7,6 @@ variables:
   min_nodes: 1
 
 deployers:
-    prod-us-west-1:
-      enabled:
-        value: "{{ ref == 'master' and env == 'production' }}"
+  prod-us-west-1:
+    enabled:
+      value: "{{ ref == 'master' and env == 'production' }}"
