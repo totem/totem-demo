@@ -1,14 +1,10 @@
 enabled: true
 
 variables:
+  stop_timeout: "60s"
   enable_travis: true
   enable_public_host: true
   node_count: 2
   min_nodes: 1
   public_host: 'totem.meltdemo.com'
-  
-deployers:
-  totem-develop-us-west-1:
-    deployment:
-      stop:
-        timeout: '300s'
+
