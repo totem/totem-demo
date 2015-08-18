@@ -14,5 +14,5 @@ deployers:
       app:
         args:
           environment:
-            TEST_ENV: 'Test quotes \' "'
+            TEST_ENV: "Test quotes ' \" "
 
