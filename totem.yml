@@ -9,7 +9,7 @@ variables:
   public_host: 'totem.meltdemo.com'
   
 deployers:
-  __default__:
+  __defaults__:
     templates:
       app:
         args:
