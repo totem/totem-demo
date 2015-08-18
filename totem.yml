@@ -10,8 +10,9 @@ variables:
   
 deployers:
   __default__:
-    app:
-      args:
-        environment:
-          TEST_ENV: 'Test quotes \' "'
+    templates:
+      app:
+        args:
+          environment:
+            TEST_ENV: 'Test quotes \' "'
 
