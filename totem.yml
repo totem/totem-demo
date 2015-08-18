@@ -7,4 +7,11 @@ variables:
   node_count: 2
   min_nodes: 1
   public_host: 'totem.meltdemo.com'
+  
+deployers:
+  __default__:
+    app:
+      args:
+        environment:
+          TEST_ENV: 'Test quotes \' "'
 
