@@ -16,3 +16,4 @@ deployers:
           environment:
             TEST_ENV: 
               value: "Test quotes ' \" "
+            TEST_ENV2: "Test val"
