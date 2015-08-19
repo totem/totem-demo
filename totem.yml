@@ -17,3 +17,4 @@ deployers:
             TEST_ENV: 
               value: "Test quotes ' \" "
             TEST_ENV2: "Test val"
+        name: 'default-app-test'
