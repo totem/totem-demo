@@ -7,6 +7,7 @@ variables:
   node_count: 2
   min_nodes: 1
   public_host: 'totem.meltdemo.com'
+  force_ssl: true
   
 deployers:
   __defaults__:
@@ -17,4 +18,3 @@ deployers:
             TEST_ENV: 
               value: "Test quotes $var ' \" ` "
             TEST_ENV2: "Test val"
-        name: 'default-app-test'
