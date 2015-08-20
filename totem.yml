@@ -7,7 +7,7 @@ variables:
   node_count: 2
   min_nodes: 1
   public_host: 'totem.meltdemo.com'
-  force_ssl: true
+  force_ssl: false
   
 deployers:
   __defaults__:
