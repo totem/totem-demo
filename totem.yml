@@ -8,6 +8,7 @@ variables:
   min_nodes: 1
   public_host: 'totem.meltdemo.com'
   force_ssl: false
+  check_path: '/dummy'
   
 deployers:
   __defaults__:
