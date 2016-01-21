@@ -2,7 +2,7 @@ enabled: true
 
 variables:
   stop_timeout: "30s"
-  enable_travis: false
+  enable_travis: true
   enable_public_host: true
   node_count: 2
   min_nodes: 1
