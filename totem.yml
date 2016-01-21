@@ -16,5 +16,8 @@ deployers:
         args:
           environment:
             TEST_ENV: 
-              value: "Test quotes $var ' \" ` "
+              value: "Test quotes"
             TEST_ENV2: "Test val"
+
+environment:
+  TEST_ENV3: "test3"
