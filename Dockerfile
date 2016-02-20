@@ -8,5 +8,5 @@ WORKDIR /opt/totem-demo
 
 
 EXPOSE 8080
-CMD ["/env/bin/python", "server.py"]
+CMD ["/env/bin/python", "schedule.py"]
 
