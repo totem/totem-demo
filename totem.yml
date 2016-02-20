@@ -1,11 +1,19 @@
 enabled: true
 
+# Run every 5 minutes
+# See https://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
+schedule: '*:0/5'
+
 variables:
   stop_timeout: "30s"
   enable_travis: false
   node_count: 1
   min_nodes: 1
-  force_ssl: false
 
 environment:
   TEST_ENV3: "test3"
+  
+deployers:
+  totem-develop-us-west-1:
+    enabled: true
+
