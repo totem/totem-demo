@@ -15,5 +15,6 @@ environment:
   
 deployers:
   totem-develop-us-west-1:
-    enabled: true
+    enabled:
+      value: "{{ env == 'development' }}"
 
