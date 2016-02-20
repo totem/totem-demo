@@ -2,22 +2,10 @@ enabled: true
 
 variables:
   stop_timeout: "30s"
-  enable_travis: true
-  enable_public_host: true
-  node_count: 2
+  enable_travis: false
+  node_count: 1
   min_nodes: 1
-  public_host: 'totem.meltdemo.com'
   force_ssl: false
-  
-deployers:
-  __defaults__:
-    templates:
-      app:
-        args:
-          environment:
-            TEST_ENV: 
-              value: "Test quotes"
-            TEST_ENV2: "Test val"
 
 environment:
   TEST_ENV3: "test3"
