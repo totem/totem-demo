@@ -8,6 +8,11 @@ variables:
   check_path: ''
 
 deployers:
+  __defaults__:
+    templates:
+      yoda-register:
+        enabled: false
+  
   not-prod-us-west-1:
     enabled: true
   totem-develop-us-west-1:
