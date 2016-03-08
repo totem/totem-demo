@@ -1,19 +1,15 @@
 enabled: true
-
-# Run every 5 minutes
-# See https://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
-schedule: '*:0/5'
-
 variables:
-  stop_timeout: "30s"
-  enable_travis: false
   node_count: 1
   min_nodes: 1
+  # Disable Discovery
+  check_port: 0
+  # Disable Deployment check
+  check_path: ''
 
-environment:
-  TEST_ENV3: "test3"
-  
 deployers:
+  not-prod-us-west-1:
+    enabled: true
   totem-develop-us-west-1:
     enabled:
       value: "{{ env == 'development' }}"
