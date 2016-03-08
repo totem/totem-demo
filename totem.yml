@@ -9,14 +9,9 @@ variables:
   check_path: ''
 
 deployers:
-  __defaults__:
-    templates:
-      yoda-register:
-        enabled: false
-  
   not-prod-us-west-1:
     enabled:
-      value: "{{ env == 'production' }}"
+      value: "{{ False and env == 'production' }}"
   totem-develop-us-west-1:
     enabled:
       value: "{{ env == 'development' }}"
