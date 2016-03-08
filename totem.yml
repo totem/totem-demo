@@ -9,15 +9,5 @@ variables:
   public_host: 'totem.meltdemo.com'
   force_ssl: false
   
-deployers:
-  __defaults__:
-    templates:
-      app:
-        args:
-          environment:
-            TEST_ENV: 
-              value: "Test quotes"
-            TEST_ENV2: "Test val"
-
 environment:
   TEST_ENV3: "test3"
