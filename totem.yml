@@ -1,11 +1,10 @@
 enabled: true
-schedule: 'now'
 variables:
   node_count: 1
   min_nodes: 1
   enable_travis: false
   # Disable Discovery
-  # check_port: 0
+  check_port: 0
   # Disable Deployment check
   check_path: ''
 
