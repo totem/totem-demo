@@ -1,2 +1,5 @@
 import os
-print('Running job on node: {}'.format(os.getenv('HOST_IP')))
+import threading
+
+print('Running job (forever) on node: {}'.format(os.getenv('HOST_IP')))
+threading.Event().wait()
