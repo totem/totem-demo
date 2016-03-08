@@ -13,7 +13,10 @@ deployers:
     templates:
       yoda-register:
         enabled: false
-
+  
+  not-prod-us-west-1:
+    enabled:
+      value: "{{ env == 'production' }}"
   totem-develop-us-west-1:
     enabled:
       value: "{{ env == 'development' }}"
