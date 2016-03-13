@@ -5,4 +5,6 @@ dev-requirements.txt
 .travis.yml
 totem.yml
 LICENSE
-DOCKERBUILDS
+DOCKER_BUILDS
+Dockerfile
+.docker*
