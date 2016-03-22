@@ -8,10 +8,17 @@ variables:
   # Disable Deployment check
   check_path: ''
 
+
+
 deployers:
+  __defaults__:
+    templates:
+      app:
+        args:
+          is_global: true
+
   not-prod-us-west-1:
-    enabled:
-      value: "{{ False and env == 'production' }}"
+    enabled: false
   totem-develop-us-west-1:
     enabled:
       value: "{{ env == 'development' }}"
