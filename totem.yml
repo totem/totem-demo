@@ -14,5 +14,7 @@ deployers:
       value: "if {{ False and env == 'production' }}"
   totem-develop-us-west-1:
     enabled:
-      value: "# if {{ env == 'development' }}"
+      value: |
+        # if true
+        {{ env == 'development' }}
 
