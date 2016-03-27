@@ -11,8 +11,8 @@ variables:
 deployers:
   not-prod-us-west-1:
     enabled:
-      value: "{{ False and env == 'production' }}"
+      value: "if {{ False and env == 'production' }}"
   totem-develop-us-west-1:
     enabled:
-      value: "{{ env == 'development' }}"
+      value: "# if {{ env == 'development' }}"
 
