@@ -1,7 +1,7 @@
 enabled: true
 
 variables:
-  enable_travis: true
+  enable_travis: false
   enable_public_host: true
   node_count: 2
   min_nodes: 1
