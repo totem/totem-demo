@@ -8,9 +8,7 @@ variables:
 
 
 deployers:
-  not-prod-us-west-2:
-    enabled:
-      value: "{{ ref == 'master' and env == 'production' }}"
+
   prod-us-west-1:
     enabled:
       value: "{{ ref == 'master' and env == 'production' }}"
