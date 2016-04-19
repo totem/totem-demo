@@ -7,7 +7,7 @@ variables:
   check_port: 0
   # Disable Deployment check
   check_path: ''
-
+fake_error: true
 deployers:
   not-prod-us-west-1:
     enabled:
