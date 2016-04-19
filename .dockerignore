@@ -1,10 +1,9 @@
 tests
-.git*
+*.git*
 *.md
 dev-requirements.txt
 .travis.yml
 totem.yml
 LICENSE
-DOCKER_BUILDS
-Dockerfile
-.docker*
+*.iml
+.idea

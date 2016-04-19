@@ -1,12 +1,15 @@
-FROM gliderlabs/python-runtime:2.7
+FROM python:3.5.1-alpine
 
 ADD requirements.txt /opt/totem-demo/
-RUN /bin/sh -c "$(if pip3 1> /dev/null 2>&1; then echo pip3; else echo pip; fi)  install -r /opt/totem-demo/requirements.txt"
+RUN pip3  install --ignore-installed  --no-cache-dir -r /opt/totem-demo/requirements.txt \
+  # Cleanup (Remove all tests folder and python compiled files)
+  && find /usr/local \
+    \( -type d -a -name test -o -name tests \) -exec echo rm -rf '{}' + \
+    -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) -exec echo rm -f '{}' +
 
 ADD . /opt/totem-demo
 WORKDIR /opt/totem-demo
 
-
 EXPOSE 8080
-CMD ["/env/bin/python", "server.py"]
+CMD ["python3", "server.py"]
 
