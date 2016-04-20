@@ -7,3 +7,8 @@ variables:
   min_nodes: 1
   force_ssl: true
 
+deployers:
+  totem-develop-us-west-1:
+    enabled:
+      value: "{{ env == 'development' }}"
+
