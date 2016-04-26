@@ -41,6 +41,11 @@
     "sinon-chai": "^2.8.0",
     "supertest": "^1.1.0"
   },
+  "scripts": {
+    "start": "node bin/www",
+    "test": "gulp test",
+    "travis": "gulp travis"
+  },
   "repository": "git@github.com:totem/totem-demo.git",
   "license": "MIT"
 }
