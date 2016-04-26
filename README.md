@@ -1,13 +1,12 @@
 # totem-demo [![Build Status](https://travis-ci.org/totem/totem-demo.svg)](https://travis-ci.org/totem/totem-demo) [![Coverage Status](https://coveralls.io/repos/totem/totem-demo/badge.svg)](https://coveralls.io/r/totem/totem-demo)
-Totem example for python flask using alpine docker image.
+Totem example using node express.
 
-# Sample Config
+## Building
 ```
-enabled: true
+docker build --rm -t totem/totem-demo:example_nodejs .
+```
 
-variables:
-  enable_travis: true
-  enable_public_host: true
-  node_count: 2
-  min_nodes: 1
+## Running
+```
+docker run -it -p 8080:8080 totem/totem-demo:example_nodejs
 ```

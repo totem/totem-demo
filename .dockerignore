@@ -1,9 +1,11 @@
-tests
+test
 *.git*
 *.md
-dev-requirements.txt
+.jshint*
 .travis.yml
 totem.yml
 LICENSE
 *.iml
 .idea
+gulpfile.js
+node_modules

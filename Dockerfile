@@ -1,19 +1,13 @@
-FROM python:3.5.1-alpine
+FROM mhart/alpine-node:4.4.3
+ENV INSTALL_DIR /opt/totem-demo
 
-ADD requirements.txt /opt/totem-demo/
-RUN \
-  # Install Application Dependencies
-  pip3  install --ignore-installed  --no-cache-dir -r /opt/totem-demo/requirements.txt \
-  # Cleanup (Remove all tests folder and python compiled files)
-  && find /usr/local \
-    \( -type d -a -name test -o -name tests \) -exec echo rm -rf '{}' + \
-    -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) -exec echo rm -f '{}' + \
-  && rm -rf /usr/src/python ~/.cache /tmp/*
-    
+ADD package.json $INSTALL_DIR/package.json
+RUN cd $INSTALL_DIR \
+    && npm install --prod \
+    && rm -rf ~/.npm
 
-ADD . /opt/totem-demo
-WORKDIR /opt/totem-demo
+ADD . $INSTALL_DIR
+WORKDIR $INSTALL_DIR
 
 EXPOSE 8080
-CMD ["python3", "server.py"]
-
+CMD ["node", "./bin/www"]
