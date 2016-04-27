@@ -11,16 +11,17 @@ variables:
 
 deployers:
   __defaults__:
-    hosts:
-      private:
-        locations:
-          healthcheck:
-            allowed-acls:
-              - internal
-              - this-cluster
-        port: 8081
-        path: /healthcheck
-        enabled: true
+    proxy:
+      hosts:
+        private:
+          locations:
+            healthcheck:
+              allowed-acls:
+                - internal
+                - this-cluster
+          port: 8081
+          path: /healthcheck
+          enabled: true
     enabled:
       value: "false"
 
