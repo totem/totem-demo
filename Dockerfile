@@ -3,16 +3,23 @@ ENV INSTALL_DIR /opt/totem-demo
 ENV MVN_VERSION 3.3.9
 ENV M2_HOME /usr/share/maven
 
-# Install Maven
+# Install/Configure Maven + Java
 RUN \
+  # Fix for Java DNS Caching
   grep '^networkaddress.cache.ttl=' $JAVA_HOME/lib/security/java.security \
       || echo 'networkaddress.cache.ttl=60' >> $JAVA_HOME/lib/security/java.security \
+
+  # Update tar to support --strip-components
   && apk --update --no-cache add tar \
+
+  # Setup maven
   && mkdir -p $M2_HOME \
   && wget -O /tmp/apache-maven-bin.tar.gz \
       http://apache.spinellicreations.com/maven/maven-3/${MVN_VERSION}/binaries/apache-maven-${MVN_VERSION}-bin.tar.gz \
   && cd /tmp && tar --strip-components=1 -zxvf apache-maven-bin.tar.gz -C /usr/share/maven \
   && ln -sf $M2_HOME/bin/mvn /usr/local/bin/mvn \
+
+  # Cleanup
   && rm -rf ~/.cache /tmp/*
 
 # Refresh Dependencies and cache it
