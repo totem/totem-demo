@@ -31,7 +31,7 @@ RUN cd $INSTALL_DIR \
 # Package JAR (offline mode)
 ADD . $INSTALL_DIR
 RUN cd $INSTALL_DIR \
-    && mvn -o package \
+    && mvn -DskipTests=true -o package \
     && mv $INSTALL_DIR/target/dropwizard*.jar $INSTALL_DIR/dropwizard.jar
 
 WORKDIR $INSTALL_DIR
