@@ -19,9 +19,9 @@ deployers:
               allowed-acls:
                 - internal
                 - this-cluster
-          port: 8081
-          path: /healthcheck
-          enabled: true
+              port: 8081
+              path: /healthcheck
+              enabled: true
     enabled:
       value: "false"
 
