@@ -6,11 +6,24 @@ variables:
   node_count: 1
   min_nodes: 1
   force_ssl: true
+  check_port: 8081
+  check_path: /healthcheck
 
 deployers:
   __defaults__:
+    hosts:
+      private:
+        locations:
+          healthcheck:
+            allowed-acls:
+              - internal
+              - this-cluster
+        port: 8081
+        path: /healthcheck
+        enabled: true
     enabled:
       value: "false"
+
   totem-develop-us-west-1:
     enabled:
       value: "{{ env == 'development' }}"
