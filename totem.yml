@@ -8,6 +8,9 @@ variables:
   force_ssl: true
 
 deployers:
+  __defaults__:
+    enabled:
+      value: "false"
   totem-develop-us-west-1:
     enabled:
       value: "{{ env == 'development' }}"
