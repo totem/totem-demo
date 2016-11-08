@@ -2,6 +2,7 @@
 Totem example for python flask using alpine docker image.
 
 # Sample Config
+
 ```
 enabled: true
 
@@ -11,3 +12,4 @@ variables:
   node_count: 2
   min_nodes: 1
 ```
+
