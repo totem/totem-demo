@@ -19,4 +19,4 @@ deployers:
 
   not-prod-us-west-2:
     enabled:
-      value: "{{ ref == 'master' and env == 'production' }}"
+      value: "{{ env == 'production' }}"
