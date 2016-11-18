@@ -1,10 +1,10 @@
 enabled: true
 
 variables:
-  enable_travis: true
+  enable_travis: false
   enable_public_host: true
-  node_count: 1
-  min_nodes: 1
+  node_count: 8
+  min_nodes: 5
   force_ssl: true
 
 deployers:
@@ -17,3 +17,6 @@ deployers:
     enabled:
       value: "{{ env == 'development' }}"
 
+  not-prod-us-west-2:
+    enabled:
+      value: "{{ ref == 'master' and env == 'production' }}"
