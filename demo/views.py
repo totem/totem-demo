@@ -6,6 +6,7 @@ app = flask.Flask(__name__)
 
 
 @app.route('/')
+@app.route('/totem-demo')
 def hello_world():
     return flask.jsonify({
         'message': 'Hello World!',
