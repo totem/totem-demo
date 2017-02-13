@@ -2,7 +2,6 @@
 Totem example for python flask using alpine docker image.
 
 # Sample Config
-
 ```
 enabled: true
 
