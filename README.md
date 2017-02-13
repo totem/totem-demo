@@ -12,4 +12,3 @@ variables:
   node_count: 2
   min_nodes: 1
 ```
-
