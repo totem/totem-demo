@@ -7,7 +7,7 @@ phases:
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
   build:
     commands:
-      - echo Build started on `date` with env:
+      - echo Build started on `date` with env
       - env
       - echo Building the Docker image...          
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
