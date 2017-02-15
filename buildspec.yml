@@ -5,8 +5,8 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
-      - aws codepipeline --region $AWS_DEFAULT_REGION get-pipeline-state --name totem-demo | jq -c '.stageStates\[\] | select(.actionStates\[\] | .latestExecution.externalExecutionId=="'$CODEBUILD_BUILD_ID'") | .latestExecution.pipelineExecutionId' | xargs aws codepipeline get-pipeline-execution --pipeline-name MyPipeline --pipeline-execution-id | jq -r -c '.pipelineExecution.artifactRevisions\[0\].revisionId' > /tmp/build_id.out
-      - echo GIT-COMMIT-SHA $(cat /tmp/build_id.out)
+      - echo -n "$CODEBUILD_BUILD_ID" | sed "s/.*:\([[:xdigit:]]\{7\}\).*/\1/" > /tmp/build_id.out
+      - echo BUILD-ID $(cat /tmp/build_id.out)
       - printf "%s:%s" "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME" "$(cat /tmp/build_id.out)" > /tmp/build_tag.out
       - printf '{"tag":"%s"}' "$(cat /tmp/build_id.out)" > /tmp/build.json
       
