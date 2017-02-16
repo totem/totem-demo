@@ -19,4 +19,5 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
+      - echo docker push "$(cat /tmp/build_tag.out)"
       - docker push "$(cat /tmp/build_tag.out)"
