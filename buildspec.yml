@@ -21,3 +21,6 @@ phases:
       - echo Pushing the Docker image...
       - echo docker push "$(cat /tmp/build_tag.out)"
       - docker push "$(cat /tmp/build_tag.out)"
+artifacts:
+  files: /tmp/build.json
+  discard-paths: yes
