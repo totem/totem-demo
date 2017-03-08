@@ -9,7 +9,7 @@ app = flask.Flask(__name__)
 @app.route('/totem-demo')
 def hello_world():
     return flask.jsonify({
-        'message': 'Hello World!',
+        'message': 'Hello World v1!',
         'python': sys.version,
         'headers': str(request.headers)
     })
